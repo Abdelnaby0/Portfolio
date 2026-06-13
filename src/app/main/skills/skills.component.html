@@ -1,0 +1,117 @@
+<div class="container skills-hero d-flex flex-column">
+
+  <div class="row flex-grow-1">
+    <div class="col-12 trans-up" data-aos="fade-up">
+
+      <h1>Skills</h1>
+
+      <div class="skills-grid mt-4">
+
+        <div class="skills-group">
+          <h5 class="text-light mb-3">Front-End</h5>
+
+          <label class="text-light fw-bold">HTML</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressHtml">
+              <span class="fw-bold">{{ progressHtml }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">CSS</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressCss">
+              <span class="fw-bold">{{ progressCss }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">JavaScript</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressJs">
+              <span class="fw-bold">{{ progressJs }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">Bootstrap</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressBootstrap">
+              <span class="fw-bold">{{ progressBootstrap }}%</span>
+            </div>
+          </div>
+          <label class="text-light fw-bold">Tailwind</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressTailwind">
+              <span class="fw-bold">{{ progressTailwind }}%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h5 class="text-light mb-3">Front-End</h5>
+
+          <label class="text-light fw-bold">JQuery</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressJquery">
+              <span class="fw-bold">{{ progressJquery }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">TypeScript</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressTypescript">
+              <span class="fw-bold">{{ progressTypescript }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">React</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressReact">
+              <span class="fw-bold">{{ progressReact }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">Angular</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressAngular">
+              <span class="fw-bold">{{ progressAngular }}%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h5 class="text-light mb-3">Back-End</h5>
+
+          <label class="text-light fw-bold">MySQL</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressMySQL">
+              <span class="fw-bold">{{ progressMySQL }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">PHP</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressPHP">
+              <span class="fw-bold">{{ progressPHP }}%</span>
+            </div>
+          </div>
+
+          <label class="text-light fw-bold">Laravel</label>
+          <div class="progress mb-3" role="progressbar">
+            <div class="progress-bar" [style.width.%]="progressLaravel">
+              <span class="fw-bold">{{ progressLaravel }}%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center py-3">
+    <a routerLink="/home" class="text-light arrow">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </div>
+
+</div>
+
+<app-indicator></app-indicator>

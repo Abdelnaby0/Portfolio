@@ -1,0 +1,10 @@
+
+.bg-body{
+  background-color: var(--main-color) !important;
+  color: #949494 !important;
+}
+.w-100p{
+  width: 100px;
+}
+
+

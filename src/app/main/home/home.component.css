@@ -1,0 +1,111 @@
+.hero {
+  height: calc(100vh - 140px); /* غير 70px لارتفاع الـ navbar */
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-img {
+  width: min(450px, 80%);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 6px #f2f1f3,
+    inset 0 0 10px #f2f1f3;
+  transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+}
+
+/* SOCIAL */
+
+.social-links-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+}
+
+.social-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--second-color);
+  transition: color 0.3s ease;
+}
+
+.social-link i {
+  font-size: 1rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #0071c7;
+}
+
+.social-link:hover i {
+  transform: scale(1.3);
+  color: #0071c7;
+}
+
+.social-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2px;
+  background: #0071c7;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* PHONE */
+
+.phone-number {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: 0.35s ease;
+  font-size: 0.85rem;
+}
+
+.phone-link:hover .phone-number {
+  opacity: 1;
+  max-width: 200px;
+}
+
+.phone-link::after {
+  display: none;
+}
+
+/* HEADING */
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+}
+
+/* ARROW */
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateY(8px);
+}

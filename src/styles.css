@@ -1,1 +1,146 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #131d2b;
+  overflow-x: hidden;
+}
+:root{
+  --main-color: #131d2b;
+  --second-color: #AEC1D0;
+  --third-color: #ECEEEE;
+  --fourth-color: #ffba00;
+  --fifth-color:#0071c7
+}
+h1{
+  color: var(--third-color);
+  font-size: 70px;
+  font-family: mainfont;
+}
+h1::after{
+  content: "";
+  display: block;
+  width: 10%;
+  margin-top:5px ;
+  height: 15px;
+  border-radius: 2px;
+  background-color: var(--third-color);
+}
+.p-color{
+  color: var(--second-color);
+}
+.trans-down{
+  animation: trans-down 1s ease-out  1 ;
+}
+.trans-up{
+  transform: translateY(20px); /* Slightly below their final position */
+  animation: trans-up 1.3s forwards;
+  opacity: 0;
+}
+.trans-left{
+  animation: trans-left 1.5s ease-out  1 ;
+}
+.trans-right{
+  animation: trans-right 1.5s ease-out  1 ;
+}
+.a-decor{
+  color: var(--fourth-color);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3;
+}
+.a-decor:hover{
+  color: var(--main-color);
+
+}
+.a-decor::after{
+  content: "";
+  display: block;
+  width: 18%;
+
+  margin-top:3px ;
+  height: 3px;
+  background-color: var(--third-color);
+  transition: all 0.5s;
+
+}
+
+.a-decor:hover{
+  color: var(--fifth-color);
+}
+.a-decor:hover::after{
+  width: 100%;
+}
+.a-hover {
+  display: inline-block;
+  padding: 6px 9px;  /* Initial padding */
+  border-radius: 100%;  /* Initial border radius */
+  transition: all 0.4s ease;  /* Smooth transition for both background and position */
+}
+
+/* Chevron icon styles with transition */
+.chevron-icon {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect for the entire link */
+.a-hover:hover {
+  background-color: var(--fifth-color);
+  padding: 2px 8px;
+  border-radius: 100%;
+  transform: translateY(8px);  /* Move both the chevron and background down */
+}
+
+/* Hover effect for the chevron icon */
+.a-hover:hover .chevron-icon {
+  transform: translateY(0);  /* The chevron moves with the entire link, so no extra transform needed here */
+}
+.fixedchev{
+  position: fixed;/* Keeps the chevron fixed in the viewport */
+  bottom: 30px;              /* Position it 20px from the bottom of the screen */
+  left: 50%;                 /* Moves the chevron to the middle of the screen */
+  transform: translateX(-50%); /* Centers the chevron horizontally by shifting it left by half its width */
+}
+
+@font-face {
+  font-family: mainfont;
+  src: url(./assets/vendors/fonts/Alice-Regular.ttf);
+}
+
+@keyframes trans-left {
+  from{
+    transform: translateX(-200%);
+  }
+  to{
+    transform: translateX(0%);
+    }
+}
+@keyframes trans-right {
+  from{
+    transform: translateX(200%);
+  }
+  to{
+    transform: translateX(0%);
+    }
+}
+
+@keyframes trans-down {
+  from{
+    transform: translateY(-250%);
+  }
+  to{
+    transform: translateY(0%);
+    }
+}
+@keyframes trans-up {
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}

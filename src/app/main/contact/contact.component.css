@@ -1,0 +1,83 @@
+.contact-hero {
+  height: calc(100vh - 140px);
+}
+
+.profile-img {
+  width: min(450px, 80%);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 6px #f2f1f3,
+    inset 0 0 10px #f2f1f3;
+  transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+}
+
+/* WRITE EMAIL */
+
+.downloadcv {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0.75rem;
+  text-decoration: none;
+  color: var(--second-color);
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.downloadcv i {
+  font-size: 1rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.downloadcv:hover {
+  color: #0071c7;
+}
+
+.downloadcv:hover i {
+  transform: scale(1.3);
+  color: #0071c7;
+}
+
+.downloadcv::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2px;
+  background: #0071c7;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.downloadcv:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* HEADING */
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+}
+
+/* ARROW */
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateY(8px);
+}

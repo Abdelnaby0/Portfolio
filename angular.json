@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "aos"
+            ],
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -21,13 +24,20 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon-512x512.png",
+              "src/favicon-192x192.png.png",
+              "src/favicon-32x32.png",
+              "src/favicon-16x16.png",
+              "src/apple-touch-icon.png",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/aos/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/aos/dist/aos.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +104,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "094fb321-9391-4e01-9ca6-925cf64367aa"
   }
 }
